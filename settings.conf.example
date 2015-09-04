@@ -1,0 +1,22 @@
+# Default data for client certificates
+export COUNTRY=MX
+export STATE=Jalisco
+export CITY=Guadalajara
+export ORGANIZATION=Example Company
+export DAYS=730
+export BITS=4096
+
+# Default export password of the PFX file
+export EXPORT_PASS=something   
+
+# The common name of the CA (not needed to be the domain name)
+export CA_COMMON_NAME=example.com
+
+# The path where the CA will be created (filename path without extension)
+export CA=./ca/ca-production
+
+# The path where the revocation list will be created
+export CRL_OUTPUT=./crl/revoke_list.pem
+
+# The user in the system which will be the owner of the final PFX file
+export PFX_USER=newint33h
