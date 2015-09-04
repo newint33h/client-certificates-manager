@@ -39,7 +39,7 @@ export CRL_OUTPUT=./crl/revoke_list.pem
 export PFX_USER=newint33h
 ```
 
-Also check for the default values ant the end of the file **openssl.conf**.
+Also check for the default values at the end of the file **openssl.conf**.
 
 ```
 default_ca	= CA_default
@@ -76,7 +76,7 @@ sudo ./generate.sh "myfilename:My Name"
 
 All the required files will be created inside the __./clients__ directory.
 
-The file __myfilename.pfx__ will be created with the user owner ```$PFX_USER```. That file should be imported to the client's browser of the OS key manager.
+The file __myfilename.pfx__ will be created with the user owner ```$PFX_USER```. That file should be imported to the client's browser or to the OS key manager.
 
 ### Revoke a client certificate
 
@@ -92,4 +92,4 @@ or using the filename without extension:
 sudo ./revoke.sh "myfilename"
 ```
 
-This will update the file ```$CRL_OUTPUT.crl``` with the revoked certificate. This file should be set inside the HTTP server revocation list parameter.
+This will update the file ```$CRL_OUTPUT.crl``` with the revoked certificate. This file should be set inside the HTTPS server revocation list parameter.
